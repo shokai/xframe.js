@@ -41,7 +41,6 @@ var XFrame = function(selector){
     self.iframe.css("margin-left", val);
   });
   this.load = function(url){
-    console.log(url);
     self.iframe.attr("src",url);
     self.iframe.css(iframe_css);
     self.__height = self.iframe.height();
