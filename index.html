@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta charset="UTF-8" content="text/html" http-equiv="Content-Type" />
+    <title>iframe scroll</title>
+    <style type="text/css">
+      body {
+        width : 1200px;
+        height : 100%;
+        padding : 0px;
+        margin : 0px;
+      }
+      div#tv {
+        float : left;
+        width : 800px;
+        height : 100%;
+      }
+      div#ctrl {
+        margin : 15px;
+        padding : 15px;
+        clear : both;
+        display : table-cell;
+        width : 400px;
+        position : absolute;
+        top : 0px;
+        left : 800px;
+      }
+      .btn {
+        padding : 5px;
+        background-color : #DDD;
+        border : 2px solid #BBB;
+        border-radius : 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="tv">
+    </div>
+    <div id="ctrl">
+      <h1>iframe scroll</h1>
+      <p>
+        <input type="text" id="url" value="http://shokai.org" size="40" />
+        <input type="button" id="btn_go" value="go" />
+      </p>
+      <p>
+        <input type="button" id="btn_up" value="up" />
+        <input type="button" id="btn_down" value="down" />
+      </p>
+    </div>
+    <script src="./jquery-1.9.0.min.js" type="text/javascript"></script>
+    <script src="./main.js" type="text/javascript"></script>
+  </body>
+</html>
