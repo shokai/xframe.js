@@ -1,7 +1,5 @@
-var xframe;
-
 $(function(){
-  xframe = new XFrame("div#tv");
+  var xframe = new XFrame("div#tv");
   $("#btn_go").click(function(){
     xframe.load($("#url").val());
   });
@@ -10,5 +8,11 @@ $(function(){
   });
   $("#btn_up").click(function(){
     xframe.scrollY(-20);
+  });
+  $("#btn_right").click(function(){
+    xframe.scrollX(20);
+  });
+  $("#btn_left").click(function(){
+    xframe.scrollX(-20);
   });
 });

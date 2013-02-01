@@ -50,4 +50,7 @@ var XFrame = function(selector){
   this.scrollY = function(pix){
     self.top = self.top - pix;
   };
+  this.scrollX = function(pix){
+    self.left = self.left - pix;
+  };
 };
