@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" content="text/html" http-equiv="Content-Type" />
-    <title>iframe scroll</title>
+    <title>cross-domain iframe scroll</title>
     <style type="text/css">
       div#tv {
         width : 800px;
@@ -12,7 +12,8 @@
     </style>
   </head>
   <body>
-    <h1>iframe scroll</h1>
+    <h1>xframe</h1>
+    <p>cross-domain iframe scroll</p>
     <div>
       <p>
         <input type="text" id="url" value="http://shokai.org" size="40" />
@@ -21,10 +22,13 @@
       <p>
         <input type="button" id="btn_up" value="up" />
         <input type="button" id="btn_down" value="down" />
+        <input type="button" id="btn_left" value="left" />
+        <input type="button" id="btn_right" value="right" />
       </p>
     </div>
     <div id="tv" />
     <script src="./jquery-1.9.0.min.js" type="text/javascript"></script>
+    <script src="./xframe.js" type="text/javascript"></script>
     <script src="./main.js" type="text/javascript"></script>
   </body>
 </html>
