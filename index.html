@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="XFrame.js : cross-domain iframe scroll" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>XFrame.js</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/shokai/xframe.js">View on GitHub</a>
+
+          <h1 id="project_title">XFrame.js</h1>
+          <h2 id="project_tagline">cross-domain iframe scroll</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/shokai/xframe.js/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/shokai/xframe.js/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>XFrame.js</h1>
+
+<p>Cross Domain iframe scroll</p>
+
+<h2>Requirements</h2>
+
+<ul>
+<li>jquery</li>
+<li>not works on file://</li>
+</ul><h2>Usage</h2>
+
+<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"xframe.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+
+<div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"tv"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</pre></div>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">xframe</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XFrame</span><span class="p">(</span><span class="s2">"div#tv"</span><span class="p">);</span>
+</pre></div>
+
+<p>load page</p>
+
+<div class="highlight"><pre><span class="nx">xframe</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="s2">"http://shokai.org"</span><span class="p">);</span>
+</pre></div>
+
+<p>scroll</p>
+
+<div class="highlight"><pre><span class="nx">xframe</span><span class="p">.</span><span class="nx">scrollX</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="nx">xframe</span><span class="p">.</span><span class="nx">scrollY</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="nx">xframe</span><span class="p">.</span><span class="nx">top</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span>
+<span class="nx">xframe</span><span class="p">.</span><span class="nx">left</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+</pre></div>
+
+<h2>Build</h2>
+
+<p>edit "HEADER.txt"</p>
+
+<pre><code>% npm install -g uglify-js
+% make build
+</code></pre>
+
+<p>=&gt; xframe.js</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">XFrame.js maintained by <a href="https://github.com/shokai">shokai</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
