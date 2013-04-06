@@ -9,6 +9,11 @@ $(function(){
     xframe.load(url);
   });
 
+  $("#check_scroll").click(function(e){
+    xframe.mouseScroll = e.currentTarget.checked;
+    $("#btn_go").click();
+  });
+
   $("#btn_down").click(function(){
     xframe.scrollY(30);
   });
