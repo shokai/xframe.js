@@ -38,6 +38,12 @@ xframe.top = 200;
 xframe.left = 50;
 ```
 
+enable/disable mouse scroll
+```javascript
+xframe.mouseScroll = true;
+xframe.mouseScroll = false;
+```
+
 Build
 -----
 

@@ -20,6 +20,14 @@ var XFrame = function(selector){
     scrolling : "no"
   });
   this.container.html(this.iframe);
+  var mouseScroll = false;
+  this.__defineSetter__("mouseScroll", function(val){
+    mouseScroll = val ? true : false;
+    self.iframe.attr({scrolling : (val ? "yes" : "no")});
+  });
+  this.__defineGetter__("mouseScroll", function(){
+    return mouseScroll;
+  });
   this.__defineGetter__("left", function(){
     return self.iframe.position().left * -1;
   });
