@@ -1,3 +1,7 @@
+=== 0.0.4  2013-04-07
+
+* enable/disable mouse scroll
+
 === 0.0.3  2013-04-06
 
 * reverse top and left property
