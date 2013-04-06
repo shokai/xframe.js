@@ -7,8 +7,14 @@
     <meta name="description" content="XFrame.js : cross-domain iframe scroll" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
     <title>XFrame.js</title>
+    <style type="text/css">
+      div#tv {
+        width : 650px;
+        height : 400px;
+        border : 2px solid #333;
+      }
+    </style>
   </head>
 
   <body>
@@ -32,48 +38,20 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h1>XFrame.js</h1>
+    <div>
+      <p>
+        <input type="text" id="url" value="http://shokai.github.com" size="40" />
+        <input type="button" id="btn_go" value="go" />
+      </p>
+      <p>
+        <input type="button" id="btn_up" value="up" />
+        <input type="button" id="btn_down" value="down" />
+        <input type="button" id="btn_left" value="left" />
+        <input type="button" id="btn_right" value="right" />
+      </p>
+    </div>
+    <div id="tv" />
 
-<p>Cross Domain iframe scroll</p>
-
-<h2>Requirements</h2>
-
-<ul>
-<li>jquery</li>
-<li>not works on file://</li>
-</ul><h2>Usage</h2>
-
-<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"xframe.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</pre></div>
-
-<div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"tv"</span><span class="nt">&gt;&lt;/div&gt;</span>
-</pre></div>
-
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">xframe</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XFrame</span><span class="p">(</span><span class="s2">"div#tv"</span><span class="p">);</span>
-</pre></div>
-
-<p>load page</p>
-
-<div class="highlight"><pre><span class="nx">xframe</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="s2">"http://shokai.org"</span><span class="p">);</span>
-</pre></div>
-
-<p>scroll</p>
-
-<div class="highlight"><pre><span class="nx">xframe</span><span class="p">.</span><span class="nx">scrollX</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
-<span class="nx">xframe</span><span class="p">.</span><span class="nx">scrollY</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
-<span class="nx">xframe</span><span class="p">.</span><span class="nx">top</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span>
-<span class="nx">xframe</span><span class="p">.</span><span class="nx">left</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
-</pre></div>
-
-<h2>Build</h2>
-
-<p>edit "HEADER.txt"</p>
-
-<pre><code>% npm install -g uglify-js
-% make build
-</code></pre>
-
-<p>=&gt; xframe.js</p>
       </section>
     </div>
 
@@ -85,7 +63,8 @@
       </footer>
     </div>
 
-    
-
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//raw.github.com/shokai/xframe.js/master/xframe.min.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
