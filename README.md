@@ -15,6 +15,6 @@ Build
 edit "HEADER.txt"
 
     % npm install -g uglify-js
-    % rake build
+    % make build
 
 => xframe.js
