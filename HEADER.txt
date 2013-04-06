@@ -1,4 +1,4 @@
-// xframe.js v0.0.2
+// xframe.js v0.0.3
 // https://github.com/shokai/xframe.js
 // (c) 2013 Sho Hashimoto <hashimoto@shokai.org>
 // The MIT License

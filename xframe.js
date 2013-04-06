@@ -1,4 +1,4 @@
-// xframe.js v0.0.2
+// xframe.js v0.0.3
 // https://github.com/shokai/xframe.js
 // (c) 2013 Sho Hashimoto <hashimoto@shokai.org>
 // The MIT License
@@ -25,23 +25,23 @@ var XFrame = function(selector){
   });
   this.container.html(this.iframe);
   this.__defineGetter__("left", function(){
-    return self.iframe.position().left;
+    return self.iframe.position().left * -1;
   });
   this.__defineGetter__("top", function(){
-    return parseInt(self.iframe.css("margin-top"));
+    return parseInt(self.iframe.css("margin-top")) * -1;
   });
   this.__defineSetter__("left", function(val){
     return parseInt(self.iframe.css("margin-left"));
   });
   this.__defineSetter__("top", function(val){
-    if(val > 0) val = 0;
-    self.iframe.height(self.container.height() - val);
-    self.iframe.css("margin-top", val);
+    if(val < 0) val = 0;
+    self.iframe.height(self.container.height() + val);
+    self.iframe.css("margin-top", val * -1);
   });
   this.__defineSetter__("left", function(val){
-    if(val > 0) val = 0;
-    self.iframe.width(self.container.width() - val);
-    self.iframe.css("margin-left", val);
+    if(val < 0) val = 0;
+    self.iframe.width(self.container.width() + val);
+    self.iframe.css("margin-left", val * -1);
   });
   this.load = function(url){
     self.url = url;
@@ -49,9 +49,9 @@ var XFrame = function(selector){
     self.iframe.css(iframe_css);
   };
   this.scrollY = function(pix){
-    self.top = self.top - pix;
+    self.top = self.top + pix;
   };
   this.scrollX = function(pix){
-    self.left = self.left - pix;
+    self.left = self.left + pix;
   };
 };
