@@ -1,5 +1,7 @@
+var xframe = null;
+
 $(function(){
-  var xframe = new XFrame("div#tv");
+  xframe = new XFrame("div#tv");
   $("#btn_go").click(function(){
     var url = $("#url").val();
     console.log("load "+url);

@@ -1,5 +1,6 @@
 var XFrame = function(selector){
   var self = this;
+  this.url = null;
   this.parent = $(selector);
   this.container = $("<div>").css({
     height: "100%",
@@ -39,7 +40,8 @@ var XFrame = function(selector){
     self.iframe.css("margin-left", val);
   });
   this.load = function(url){
-    self.iframe.attr("src",url);
+    self.url = url;
+    self.iframe.attr("src", url);
     self.iframe.css(iframe_css);
   };
   this.scrollY = function(pix){
