@@ -2,10 +2,11 @@ XFrame.js
 =========
 Cross Domain iframe scroll
 
+[demo](http://shokai.github.io/xframe.js/)
 
 Requirements
 ------------
-* jquery
+* jQuery
 * not works on file://
 
 
